@@ -1,14 +1,18 @@
 import React, { useState } from "react";
+import FormattedDate2 from "./FormattedDate";
 import "./Weather.css";
 import axios from "axios";
 
 export default function Weather(props) {
     const [weatherData, setWeatherData] = useState({ ready: false});
+    
+    
     function handleResponse(response) {
         setWeatherData({
             ready: true,
             temperature: response.data.main.temp,
             humidity: response.data.main.humidity,
+             date: new Date(response.data.dt * 1000),
             description: response.data.main.weather[0].description,
             date: "Sunday 17:00",
             iconUrl: "https://ssl.gstatic.com/onebox/weather/64/rain_light.png",
@@ -33,7 +37,9 @@ export default function Weather(props) {
                 </form>
                 <h1>{weatherData.city}</h1>
                 <ul>
-                    <li>{weatherData.date}</li>
+                    <li>
+                        <FormattedDate date={weatherData.date} />
+                    </li>
                     <li className="text-capitalize">{weatherData.description}</li>
                 </ul>
                 <div className="row mt-3">
@@ -56,6 +62,7 @@ export default function Weather(props) {
                 </div>
             </div>
         );
+        
     } else {
         const apiKey = "a710bd8bd76400c9658ef649d9e81728";
         let city = "Johannesburg";
