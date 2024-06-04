@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormattedDate2 from "./FormattedDate";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 import axios from "axios";
 
@@ -62,7 +62,7 @@ export default function Weather(props) {
                 </div>
             </div>
         );
-        
+
     } else {
         const apiKey = "a710bd8bd76400c9658ef649d9e81728";
         let city = "Johannesburg";
