@@ -23,7 +23,6 @@ export default function Weather(props) {
 
     function search() {
       const apiKey = "a710bd8bd76400c9658ef649d9e81728";
-      let city = "Johannesburg";
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
       axios.get(apiUrl).then(handleResponse);
     }
