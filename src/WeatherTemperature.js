@@ -19,7 +19,7 @@ export default function WeatherTemperature (props) {
         <div className="WeatherTemperature">
           <span className="temperature">{Math.round(props.celcius)}</span>
           <span className="unit">
-            ℃ |{" "}<a href="/"onClick={convertToFahrenheit}>℉</a>{" "}
+           ℃  |{" "}<a href="/"onClick={convertToFahrenheit}>℉</a>{" "}
           </span>
         </div>
       );
