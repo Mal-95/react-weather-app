@@ -7,7 +7,7 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="Johannesburg" />
         <footer>This project was coded by{" "}
-        <a href="https://github.com/Mal-95" target="_blank" rel="noreferrer">Malebo Letsoalo,</a>
+        <strong>Malebo Letsoalo,</strong>
         {" "}open-sourced on{" "}
         <a href="https://github.com/Mal-95/react-weather-project" target="_blank" rel="noreferrer">GitHub</a>
         {" "}and hosted on{" "}
