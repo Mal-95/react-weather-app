@@ -1,5 +1,5 @@
 .Weather {
-  border: 1px solid rgb(130, 103, 134);
+  border: 1px rgb(130, 103, 134);
   font-family: Arial, Helvetica, sans-serif;
   padding: 16px;
   margin: 30px auto 10px;
@@ -27,11 +27,11 @@
 
 .Weather .search-input {
   background: #aa9fc4;
-  border: none;
+  border: 1px slateblue;
   padding: 15px 20px;
   display: inline-block;
   border-radius: 6px;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgba(189, 141, 185, 0.619);
   font-size: 16px;
   height: 50px;
   line-height: 20px;
@@ -39,15 +39,14 @@
 
 .Weather form-control {
   line-height: 20px;
-  border: #561466;
-  color: rgba(52, 21, 190, 0.4);
+  background: #7c6189;
   font-size: 16px;
   padding: 15px 0;
 }
 
 .Weather .search-input::placeholder {
   line-height: 20px;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgba(147, 134, 207, 0.912);
 }
 
 .Weather h1 {
@@ -56,7 +55,7 @@
   font-weight: bold;
   font-size: 38px;
   line-height: 48px;
-
+  text-align: left;
   color: #272142;
 }
 
@@ -66,9 +65,10 @@
 }
 
 .Weather li {
+  text-align: justify;
   font-weight: 500;
   margin-bottom: 5px;
-  color: rgba(215, 24, 200, 0.66);
+  color: rgba(87, 63, 85, 0.66);
   font-size: 16px;
   line-height: 20px;
   list-style: none;
@@ -76,6 +76,7 @@
 
 .Weather li strong {
   font-weight: bold;
+  color: blueviolet;
 }
 
 .Weather .temperature {
