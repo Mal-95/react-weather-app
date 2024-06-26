@@ -3,6 +3,7 @@ import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
 import axios from "axios";
+import { DNA } from "react-loader-spinner";
 
 export default function Weather(props) {
     const [ weatherData, setWeatherData ] = useState({ ready: false});
@@ -68,6 +69,15 @@ export default function Weather(props) {
 
     } else {
       search();
-      return "Loading...";
+      return (
+        <DNA
+          visible={true}
+          height="80"
+          width="80"
+          ariaLabel="dna-loading"
+          wrapperStyle={{}}
+          wrapperClass="dna-wrapper"
+        />
+      );
     }
 }

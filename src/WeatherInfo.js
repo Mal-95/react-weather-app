@@ -6,29 +6,27 @@ import WeatherTemperature from "./WeatherTemperature";
 export default function WeatherInfo(props) {
     return (
       <div className="WeatherInfo">
-        <h1>{props.data.city}</h1>
-        <ul>
-          <li>
-            <FormattedDate date={props.data.date} />
-          </li>
-          <li className="text-capitalize">{props.data.description}</li>
-        </ul>
-        <div className="row mt-3">
+        <div className="row">
           <div className="col-6">
-            <div className="d-flex">
-              <div>
-                <WeatherIcon code={props.data.icon} size={52} />
-              </div>
-              <div>
-                <WeatherTemperature celsius={props.data.temperature} />
-              </div>
-            </div>
-          </div>
-          <div className="col-6">
+            <h1>{props.data.city}</h1>
             <ul>
-              <li>Humidity: {props.data.humidity}%</li>
-              <li>Wind: {Math.round(props.data.wind)} km/h</li>
+              <li className="text-capitalize">
+                <FormattedDate date={props.data.date} />,
+                <span>{props.data.description}</span>
+              </li>
+              <li>
+                  Humidity: <strong>{props.data.humidity}%</strong>, Wind:{" "}
+                  <strong>{Math.round(props.data.wind)} km/h</strong>
+                </li>
             </ul>
+          </div>
+          <div className="col-lg-6 col-md-6 col-sm-8">
+            <div className="temperature-container d-flex justify-content-end">
+              <WeatherIcon code={props.data.icon} size={52} />
+                <div>
+                  <WeatherTemperature celsius={props.data.temperature} />
+                </div>
+            </div>
           </div>
         </div>
       </div>
